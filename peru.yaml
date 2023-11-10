@@ -12,10 +12,8 @@ git module landscape-dev:
     - desk-dev/sur
     - desk-dev/mar
   drop:
-    - desk-dev/sur/hark-store.hoon
-    - desk-dev/lib/hark-store.hoon
     - desk-dev/lib/mip.hoon
-  rev: 521d84abdb8373465f0e6a6cdbf571b7152f06c5
+  rev: bab05d112c9b5213afe099b89fa5ab4f749c6f6a
 
 git module base-dev:
   url: https://github.com/urbit/urbit
@@ -26,7 +24,7 @@ git module base-dev:
     - main/mar
     - main/lib
     - main/sur
-  rev: f58fc8b4628f0c6423b923e861c17591b694f78a
+  rev: f7d4984072810a3ea02efa92ca4801ca03923fdb
 
 git module paldev:
   url: https://github.com/Fang-/suite

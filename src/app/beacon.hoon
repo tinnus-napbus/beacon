@@ -123,7 +123,7 @@
         (bail id 'not-implemented')
       =/  url
         %-  (ot url+so ~):dejs:format
-        (need (de-json:html q:(need body.request.inbound-request)))
+        (need (de:json:html q:(need body.request.inbound-request)))
       =/  status-cards
         %+  give-simple-payload:app:server  id
         %-  simple-payload:http
@@ -138,7 +138,7 @@
         (bail id 'not-implemented')
       =/  target=@p
         %-  (ot ship+(se %p) ~):dejs:format
-        (need (de-json:html q:(need body.request.inbound-request)))
+        (need (de:json:html q:(need body.request.inbound-request)))
       ::(on-poke %beacon-appeal !>(`appeal:beacon`[%auth target]))
       =/  cards
         %+  give-simple-payload:app:server  id
@@ -161,7 +161,7 @@
         (bail id 'not-implemented')
       =/  target=@p
         %-  (ot ship+(se %p) ~):dejs:format
-        (need (de-json:html q:(need body.request.inbound-request)))
+        (need (de:json:html q:(need body.request.inbound-request)))
       =/  result  (~(gut by bids) target %clotho)
       :_  this
       %+  give-simple-payload:app:server  id
