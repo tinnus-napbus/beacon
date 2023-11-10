@@ -1,0 +1,46 @@
+imports:
+    base-dev: ./src
+    landscape-dev: ./src
+    paldev: ./src
+    docs-app: ./src
+
+git module landscape-dev:
+  url: https://github.com/tloncorp/landscape
+  export: desk-dev
+  pick:
+    - desk-dev/lib
+    - desk-dev/sur
+    - desk-dev/mar
+  drop:
+    - desk-dev/sur/hark-store.hoon
+    - desk-dev/lib/hark-store.hoon
+    - desk-dev/lib/mip.hoon
+  rev: 521d84abdb8373465f0e6a6cdbf571b7152f06c5
+
+git module base-dev:
+  url: https://github.com/urbit/urbit
+  move:
+    pkg/base-dev: main
+  export: main
+  pick:
+    - main/mar
+    - main/lib
+    - main/sur
+  rev: f58fc8b4628f0c6423b923e861c17591b694f78a
+
+git module paldev:
+  url: https://github.com/Fang-/suite
+  pick:
+    - lib/rudder.hoon
+  rev: 5e7385beafe20a7d4bd8fbe17318cdc839c7554e
+
+git module docs-app:
+  url: https://github.com/tinnus-napbus/docs-app
+  move:
+    bare-desk: bare
+  export: bare
+  pick:
+    - bare/mar
+    - bare/lib
+    - bare/sur
+  rev: 04026d5c9346adaa6ba60bcf33196662df283f1d
